@@ -1,7 +1,6 @@
 const BridgeEth = artifacts.require("./BridgeEth.sol");
 
-const privKey =
-  "297b88a79adffda6a5e37e1cc34da8a29cd60d14f66c15f21006f39e0d69540a";
+const privKey = "";
 
 module.exports = async (done) => {
   const nonce = 1; //Need to increment this for each new transfer

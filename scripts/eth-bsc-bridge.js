@@ -11,8 +11,7 @@ const web3Eth = new Web3(
 const web3Bsc = new Web3("https://data-seed-prebsc-1-s3.binance.org:8545");
 
 // The private key of the wallet to be used as the admin address
-const adminPrivKey =
-  "297b88a79adffda6a5e37e1cc34da8a29cd60d14f66c15f21006f39e0d69540a";
+const adminPrivKey = "";
 
 // Deriving the public address of the wallet using the private key
 const { address: admin } = web3Bsc.eth.accounts.wallet.add(adminPrivKey);
@@ -30,6 +29,7 @@ const bridgeBsc = new web3Bsc.eth.Contract(
 );
 
 // Listening to Transfer events emitted by the BridgeEth contract
+console.log("Listening to the events....");
 bridgeEth.events
   .Transfer({ fromBlock: 0, step: 0 })
   .on("data", async (event) => {

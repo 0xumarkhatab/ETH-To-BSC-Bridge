@@ -1,6 +1,5 @@
 const HDWalletProvider = require("@truffle/hdwallet-provider");
-const mnemonic =
-  "dawn rent you scissors south abuse once violin unveil birth slice noise";
+const mnemonic = "";
 
 module.exports = {
   networks: {
@@ -15,6 +14,7 @@ module.exports = {
       network_id: 5, // Goerli's id
       chain_id: 5,
       skipDryRun: true,
+      networkCheckTimeout: 100000,
     },
     bsc_testnet: {
       provider: () =>
@@ -25,6 +25,7 @@ module.exports = {
       skipDryRun: true,
       network_id: 97, // Binance Snart Chain testnet's id
       chain_id: 97,
+      networkCheckTimeout: 100000,
     },
   },
 
